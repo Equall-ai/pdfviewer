@@ -1,0 +1,80 @@
+:root {
+  --background-default: var(--color-white);
+  --background-secondary: var(--background-layer-1);
+
+  --background-layer-0: var(--color-white);
+  --background-layer-1: #f9f8f6;
+  --background-disabled: var(--color-grey-01);
+  --background-prompt: #fbfaf9;
+  --background-overlay: rgba(0, 0, 0, 0.54);
+
+  --color-divider-light: #e2e2e2;
+  --color-divider-medium: #c3c3c3;
+  --color-divider-dark: #b0b0b0;
+
+  --text-default: var(--color-black);
+  --text-default-disabled: #c3c3c3;
+  --text-secondary: #808080;
+
+  /* PRIMARY */
+  --color-primary-main: var(--color-denim);
+  --color-primary-light: #5c94e5;
+  --color-primary-hover: rgba(57, 125, 224, 0.04);
+  --color-primary-selected: rgba(57, 125, 224, 0.07);
+  --color-primary-focus: rgba(57, 125, 224, 0.2);
+  --color-primary-active: rgba(58, 116, 184, 0.07);
+
+  --color-secondary-main: var(--color-paco);
+  --color-secondary-light: #711e22;
+  --color-secondary-hover: rgba(57, 15, 17, 0.08);
+  --color-secondary-selected: rgba(57, 15, 17, 0.12);
+  --color-secondary-main-active: #212f4a;
+  --color-secondary-main-transparent-hover: rgba(41, 58, 92, 0.08);
+  --color-secondary-main-transparent-selected: rgba(41, 58, 92, 0.04);
+  /* TODO: what's the difference between main-active and active? */
+  --color-secondary-active: rgba(75, 131, 198, 0.07);
+
+  --color-tertiary-main: #f8f2e7;
+  --color-tertiary-dark: #f2e7d4;
+  --color-tertiary-contrast: var(--color-resin);
+  /* TODO: might need to remove hover */
+  --color-tertiary-hover: #f5f0eb;
+
+  --color-nav-item-hover: #eeeeee;
+  --color-nav-item-active: #eeeeee;
+  --color-nav-item-focused: #f4f5f0;
+  --color-nav-item-not-ready: #e2e2e2;
+
+  --color-icon-main: var(--color-black);
+  --color-icon-button-background: transparent;
+  --color-icon-button-background-hover: rgba(58, 116, 184, 0.04);
+  --color-icon-button-background-active: rgba(58, 116, 184, 0.07);
+  --color-primary-selected: rgba(58, 116, 184, 0.07);
+  --color-badge-default: var(--color-primary-selected);
+
+  --color-error-main: var(--color-resin);
+  --color-error-light: var(--color-orange);
+  --color-error-transparent: rgba(196, 60, 13, 0.08);
+  --color-error-hover: rgba(196, 60, 13, 0.08);
+  --color-error-active: rgba(196, 60, 13, 0.07);
+
+  --color-input-unfocused: #d9d9d9;
+  --color-input-box-shadow: rgba(5, 145, 255, 0.1);
+
+  --disabled-opacity: 0.54;
+  --secondary-opacity: 0.87;
+  --secondary-selected: rgba(41, 58, 92, 0.12);
+
+  --color-success-main: var(--color-jewel);
+  --color-success-light: #037d40;
+  --color-success-active: rgba(153, 224, 153, 0.07);
+  --color-success-hover: rgba(3, 125, 64, 0.12);
+  --color-success-background-light: rgba(153, 224, 153, 0.12);
+
+  --color-warning-main: #ffeb3b;
+  --color-warning-light: #ffee58;
+
+  --color-background-selected: rgba(57, 15, 17, 0.12);
+  --color-background-hover: rgba(57, 15, 17, 0.08);
+  --color-background-active: rgba(57, 15, 17, 0.12);
+}

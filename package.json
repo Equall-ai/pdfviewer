@@ -1,0 +1,36 @@
+{
+  "name": "pdfviewer",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev --host --port 8888",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5.0.2",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/typography": "^0.5.15",
+    "@types/node": "^20.16.5",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "postcss-load-config": "^6.0.1",
+    "postcss-preset-env": "^8.5.1",
+    "svelte-check": "^4.1.1",
+    "tailwindcss": "^3.4.13",
+    "tailwindcss-animate": "1.0.7",
+    "typescript": "^5.6.2",
+    "vite": "^6.0.3"
+  },
+  "dependencies": {
+    "@sveltejs/adapter-node": "^5.2.10",
+    "@sveltejs/kit": "^2.20.8",
+    "clsx": "^2.1.1",
+    "pdfjs-dist": "4.7.76",
+    "svelte": "^5.28.2",
+    "svelte-preprocess": "^6.0.2",
+    "svelte-tiny-virtual-list": "^2.1.2",
+    "tailwind-merge": "^2.5.3"
+  }
+}

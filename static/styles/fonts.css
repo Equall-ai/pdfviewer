@@ -1,0 +1,118 @@
+@font-face {
+  font-family: 'ABC Monument G Mono';
+  src:
+    url('/fonts/ABCMonumentGroteskMono-Regular.woff2') format('woff2'),
+    url('/fonts/ABCMonumentGroteskMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ABC Monument G Mono';
+  src:
+    url('/fonts/ABCMonumentGroteskMono-Medium.woff2') format('woff2'),
+    url('/fonts/ABCMonumentGroteskMono-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ABC Monument Grotesk';
+  src:
+    url('/fonts/ABCMonumentGrotesk-Regular.woff2') format('woff2'),
+    url('/fonts/ABCMonumentGrotesk-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ABC Monument Grotesk';
+  src:
+    url('/fonts/ABCMonumentGrotesk-RegularItalic.woff2') format('woff2'),
+    url('/fonts/ABCMonumentGrotesk-RegularItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ABC Monument Grotesk';
+  src:
+    url('/fonts/ABCMonumentGrotesk-Medium.woff2') format('woff2'),
+    url('/fonts/ABCMonumentGrotesk-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ABC Monument Grotesk';
+  src:
+    url('/fonts/ABCMonumentGrotesk-MediumItalic.woff2') format('woff2'),
+    url('/fonts/ABCMonumentGrotesk-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ABC Monument Grotesk';
+  src:
+    url('/fonts/ABCMonumentGrotesk-Bold.woff2') format('woff2'),
+    url('/fonts/ABCMonumentGrotesk-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ABC Monument Grotesk';
+  src:
+    url('/fonts/ABCMonumentGrotesk-BoldItalic.woff2') format('woff2'),
+    url('/fonts/ABCMonumentGrotesk-BoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* @link https://utopia.fyi/type/calculator?c=720,14,1.2,1920,18,1.125,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --step--2: clamp(0.6076rem, 0.4389rem + 0.375vi, 0.8889rem);
+  --step--1: clamp(0.7292rem, 0.5667rem + 0.3611vi, 1rem);
+  --step-0: clamp(0.875rem, 0.725rem + 0.3333vi, 1.125rem);
+  --step-1: clamp(1.05rem, 0.9206rem + 0.2875vi, 1.2656rem);
+  --step-2: clamp(1.26rem, 1.1617rem + 0.2184vi, 1.4238rem);
+  --step-3: clamp(1.512rem, 1.4581rem + 0.1197vi, 1.6018rem);
+  --step-4: clamp(1.802rem, 1.8218rem + -0.0165vi, 1.8144rem);
+  --step-5: clamp(2.0273rem, 2.2673rem + -0.2vi, 2.1773rem);
+
+  --font-size-h1: var(--step-5);
+  --font-size-h2: var(--step-4);
+  --font-size-h3: var(--step-3);
+  --font-size-h4: var(--step-2);
+  --font-size-h5: var(--step-1);
+  --font-size-h6: var(--step-0);
+  --font-size-body1: var(--step-0);
+  --font-size-body2: var(--step--1);
+  --font-size-button: var(--step--1);
+  --font-size-button-small: var(--step--2);
+  --font-size-caption: var(--step--2);
+
+  --font-line-height-s: 1.12; /* used for h1 */
+  --font-line-height-m: 1.22; /* used for h2 */
+  --font-line-height-l: 1.32; /* used for h3 */
+  --font-line-height-default: 1.5;
+
+  --font-weight-default: 400;
+  --font-weight-button: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --font-family-interface: 'ABC Monument Grotesk', sans-serif;
+  --font-family-body: 'linotype-sabon', serif;
+  --font-family-mono: 'ABC Monument G Mono', monospace;
+}

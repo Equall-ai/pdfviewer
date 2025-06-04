@@ -1,0 +1,51 @@
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  /* GREYS */
+  --grey-01: #f4f5f0;
+  --grey-02: #eeeeee;
+  --grey-03: #e2e2e2;
+  --grey-04: #c3c3c3;
+  --grey-05: #b0b0b0;
+
+  /* REDS */
+  --color-coral: #ff8356;
+  --color-coral-light: #f8f2e7;
+  --color-orange: #fc4f07;
+  --color-orange-light: #ffdacc;
+  --color-resin: #aa3200;
+  --color-resin-light: #ffba99;
+
+  /* YELLOWS */
+  --color-marigold: #fdf18b;
+  --color-marigold-light: #f0ece6;
+  --color-lumen: #fdb702;
+  --color-lumen-light: #ffeecb;
+  --color-meteorite: #a08b4a;
+  --color-meteorite-light: #ffde99;
+
+  /* GREENS */
+  --color-mint: #cbefcc;
+  --color-mint-light: #eaf3e6;
+  --color-jewel: #025f31;
+  --color-jewel-light: #e1ecdc;
+  --color-slate: #8b9f8f;
+  --color-slate-light: #cde8ce;
+
+  /* BLUES */
+  --color-denim: #397de0;
+  --color-denim-light: #ebf2fb;
+  --color-royal-blue: #1700ff;
+  --color-royal-blue-light: #d6e7ff;
+  --color-hydro: #006489;
+  --color-hydro-light: #acd4fd;
+
+  /* PURPLES */
+  --color-kobi: #f0acd1;
+  --color-kobi-light: #f5eaf0;
+  --color-orchid: #cd7dcb;
+  --color-orchid-light: #ecd7e2;
+  --color-paco: #390f11;
+  --color-paco-light: #f0a6bc;
+}

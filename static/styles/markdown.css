@@ -1,0 +1,366 @@
+/* keeping this here until we update our preprocessor to use postcss out of the box with "global" */
+.markdown-body {
+  text-align: left;
+  flex-grow: 1;
+  word-wrap: break-word;
+  font-family: var(--font-family-interface);
+  font-size: var(--font-size-body2);
+
+  /* TEXT */
+  p {
+    font-size: var(--font-size-body2);
+    margin-bottom: var(--spacing-3);
+    font-family: var(--font-family-interface);
+  }
+  /* END TEXT */
+
+  /* HEADINGS */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    /* these are just the defaults, we should override
+        them in specific contexts (i.e. summary vs. chat) */
+    margin-top: var(--spacing-6);
+    margin-bottom: var(--spacing-2);
+    font-family: var(--font-family-interface);
+
+    tt,
+    code {
+      padding: 0 0.2em;
+      font-size: inherit;
+    }
+  }
+
+  summary {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      display: inline-block;
+
+      /* not sure if necessary */
+      .anchor {
+        margin-left: -40px;
+      }
+    }
+
+    h1,
+    h2 {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+  /* END HEADINGS */
+
+  /* EMPHASIS */
+  em {
+    font-style: italic;
+  }
+  strong {
+    /* font-weight: var(--font-weight-bold); didn't work */
+    font-weight: 700;
+    font-weight: bolder;
+  }
+  /* END EMPHASIS */
+
+  /* LISTS */
+  ul,
+  ol {
+    padding-left: 2em;
+
+    &.no-list {
+      padding: 0;
+      list-style-type: none;
+    }
+  }
+
+  ol[type='a s'],
+  ol ol li {
+    list-style-type: lower-alpha;
+  }
+
+  ol[type='A s'] {
+    list-style-type: upper-alpha;
+  }
+
+  ol[type='i s'] {
+    list-style-type: lower-roman;
+  }
+
+  ol[type='I s'] {
+    list-style-type: upper-roman;
+  }
+
+  ol[type='1'] {
+    list-style-type: decimal;
+  }
+
+  ul li {
+    list-style-type: disc;
+    ul li {
+      list-style-type: circle;
+      ul li {
+        list-style-type: square;
+      }
+    }
+  }
+
+  ol {
+    ul li {
+      list-style-type: circle;
+      ul li {
+        list-style-type: square;
+      }
+    }
+  }
+
+  ol li {
+    list-style-type: decimal;
+    ol li {
+      list-style-type: lower-alpha;
+      ol li {
+        list-style-type: lower-roman;
+        ol li {
+          list-style-type: decimal;
+        }
+      }
+    }
+  }
+
+  /* Reset <ol> style to decimal (HTML default) specifically for AsciiDoc
+      <div><ol> construction (doesn't affect MarkDown) */
+  div > ol:not([type]) {
+    list-style-type: decimal;
+  }
+
+  /* these are just the defaults, we should override
+      them in specific contexts (i.e. summary vs. chat) */
+  ul,
+  ol {
+    margin: var(--spacing-2) 0;
+  }
+  ul ul,
+  ul ol,
+  ol ol,
+  ol ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  li {
+    font-size: var(--font-size-body2);
+    margin-top: var(--spacing-2);
+    line-height: 1.5;
+  }
+
+  li > p:not(:first-of-type) {
+    margin-top: var(--spacing-1);
+  }
+
+  li + li {
+    margin-top: var(--spacing-2);
+  }
+
+  > ul > li,
+  > ol > li {
+    margin-top: var(--spacing-3) !important;
+  }
+
+  dl {
+    padding: 0;
+
+    dt {
+      padding: 0;
+      margin-top: var(--spacing-4);
+      font-size: 1em;
+      font-style: italic;
+      font-weight: var(--font-weight-button);
+    }
+
+    dd {
+      padding: 0 var(--spacing-4);
+      margin-bottom: var(--spacing-4);
+    }
+  }
+
+  /* checkbox-specific styles */
+  li:has(p input[type='checkbox']) {
+    list-style-type: none;
+  }
+  input[type='checkbox'] {
+    margin-left: calc(var(--spacing-6) * -1);
+  }
+  /* END LISTS */
+
+  /* LINKS */
+  a {
+    color: var(--color-primary-main);
+    font-weight: var(--font-weight-button);
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.25s;
+
+    &:hover {
+      text-decoration-color: var(--color-primary-main);
+    }
+  }
+  /* END LINKS */
+
+  /* CODE */
+  code,
+  tt {
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 95%;
+    white-space: break-spaces;
+    background-color: var(--color-divider-light);
+    border-radius: var(--spacing-2);
+  }
+
+  del code {
+    text-decoration: inherit;
+  }
+
+  samp {
+    font-size: 95%;
+  }
+
+  pre {
+    word-wrap: normal;
+    font-family: var(--font-family-mono) !important;
+    margin: var(--spacing-2) 0;
+
+    code {
+      font-size: 100%;
+    }
+
+    > code {
+      padding: 0;
+      margin: 0;
+      word-break: normal;
+      white-space: pre;
+      background: transparent;
+      border: 0;
+    }
+  }
+
+  .highlight {
+    margin-bottom: 16px;
+
+    pre {
+      margin-bottom: 0;
+      word-break: normal;
+    }
+  }
+
+  .highlight pre,
+  pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 95%;
+    line-height: 1.45;
+    color: var(--text-default);
+    background-color: var(--color-divider-light);
+    border-radius: var(--spacing-2);
+  }
+
+  pre code,
+  pre tt {
+    display: inline;
+    max-width: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+  }
+  /* END CODE */
+
+  /* FOOTNOTES */
+  a[href*='?ref='] {
+    display: inline-block;
+    text-wrap: none;
+    text-decoration: none;
+    text-align: center;
+    color: var(--text-default);
+    font-size: var(--font-size-body2);
+    height: var(--spacing-5);
+    width: var(--spacing-5);
+    line-height: 1.4; /* this is different than current citation style */
+    border-radius: var(--border-default);
+    background-color: var(--color-nav-item-active);
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-primary-light);
+    }
+  }
+  /* END FOOTNOTES */
+
+  /* TABLES */
+  table {
+    display: block;
+    width: 100%; /* keep for backwards compatibility */
+    width: max-content;
+    max-width: 100%;
+    overflow: auto;
+    margin-bottom: var(--spacing-2);
+
+    th {
+      font-weight: var(--font-weight-button);
+    }
+
+    th,
+    td {
+      padding: var(--spacing-2) var(--spacing-4);
+      border: 1px solid var(--color-divider-light);
+    }
+
+    td {
+      > :last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    tr {
+      background-color: var(--background-layer-0);
+      border-top: 1px solid var(--color-divider-light);
+    }
+
+    img {
+      background-color: transparent;
+    }
+  }
+  /* END TABLES */
+
+  /* BLOCKQUOTES */
+  blockquote {
+    text-justify: left;
+    padding: 0.5em;
+    margin: var(--spacing-3) 0;
+    margin-left: 0.5em;
+    p {
+      display: inline;
+      line-height: 1.35;
+    }
+  }
+  blockquote:before {
+    content: open-quote;
+    line-height: 0.1em;
+    vertical-align: -0.4em;
+  }
+  /* END BLOCKQUOTES */
+
+  /* HORIZONTAL RULES */
+  hr {
+    border-bottom: 0.25px solid var(--color-divider-light);
+  }
+  /* END HORIZONTAL RULES */
+}

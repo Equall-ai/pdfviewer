@@ -1,0 +1,194 @@
+:root {
+  --content-max-width: calc(275 * var(--spacing-base));
+  --inner-content-max-width: calc(208 * var(--spacing-base));
+  --inner-content-padding-default: calc(var(--spacing-base) * 12);
+  --inner-content-padding-medium: calc(var(--spacing-base) * 22);
+  --inner-content-padding-small: calc(var(--spacing-base) * 6);
+  --inner-content-padding-xsmall: calc(var(--spacing-base) * 2);
+  --modal-width-default: 480px;
+  --modal-width-small: 360px;
+  --chat-width: 640px;
+}
+
+html,
+body {
+  font-family: var(--font-family-interface);
+}
+
+svg {
+  color: var(--color-icon-main);
+  &:focus-visible {
+    color: var(--color-primary-main);
+  }
+}
+
+.serif {
+  font-family: var(--font-family-body);
+}
+h6.serif {
+  font-weight: var(--font-weight-bold);
+}
+
+.interface {
+  font-family: var(--font-family-interface);
+}
+
+h1,
+.h1 {
+  color: var(--text-default);
+  font-weight: var(--font-weight-default);
+  font-size: var(--font-size-h1);
+  line-height: var(--font-line-height-s);
+  letter-spacing: -0.335px;
+}
+
+h2,
+.h2 {
+  color: var(--text-default);
+  font-weight: var(--font-weight-default);
+  font-size: var(--font-size-h2);
+  line-height: var(--font-line-height-m);
+  letter-spacing: -0.145px;
+}
+
+h3,
+.h3 {
+  color: var(--text-default);
+  font-weight: var(--font-weight-default);
+  font-size: var(--font-size-h3);
+  line-height: var(--font-line-height-l);
+  letter-spacing: -0.062px;
+}
+
+h4,
+.h4 {
+  color: var(--text-default);
+  font-weight: var(--font-weight-default);
+  font-size: var(--font-size-h4);
+  line-height: var(--font-line-height-default);
+}
+
+h5,
+.h5 {
+  color: var(--text-default);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-h5);
+  line-height: var(--font-line-height-default);
+}
+
+h6,
+.h6 {
+  color: var(--text-default);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-h6);
+  line-height: var(--font-line-height-default);
+}
+
+p,
+.response {
+  color: var(--text-default);
+  font-weight: var(--font-weight-default);
+  font-size: var(--font-size-body1);
+  line-height: var(--font-line-height-default);
+}
+
+.body1 {
+  color: var(--text-default);
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-default);
+  font-size: var(--font-size-body1);
+  line-height: var(--font-line-height-default);
+}
+
+.body2,
+.small,
+small {
+  color: var(--text-default);
+  font-weight: var(--font-weight-default);
+  font-size: var(--font-size-body2);
+  line-height: var(--font-line-height-default);
+}
+.body2 {
+  font-family: var(--font-family-body);
+}
+
+.button {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-button);
+  line-height: var(--font-line-height-default);
+  text-transform: uppercase;
+}
+
+.button-small {
+  color: var(--text-default);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-button-small);
+  line-height: var(--font-line-height-default);
+  text-transform: uppercase;
+
+  svg {
+    color: var(--text-default);
+  }
+}
+
+caption,
+.caption {
+  color: var(--text-default);
+  font-family: var(--font-family-mono);
+  font-weight: var(--font-weight-default);
+  font-size: var(--font-size-caption);
+  line-height: var(--font-line-height-default);
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.hidden {
+  display: none;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+/* Svelte Tooltip Overrides: https://github.com/svelte-plugins/tooltips */
+.tooltip {
+  --tooltip-arrow-size: 8px;
+  --tooltip-background-color: var(--text-default);
+  --tooltip-border-radius: 8px;
+  --tooltip-box-shadow: var(--elevation-4);
+  --tooltip-font-family: var(--font-family-interface);
+  --tooltip-font-size: var(--font-size-body2);
+  --tooltip-font-weight: var(--font-weight-default);
+  --tooltip-line-height: 1.25rem;
+  --tooltip-color: var(--color-white);
+  --tooltip-offset-x: 10px;
+  --tooltip-offset-y: 10px;
+  --tooltip-padding: 8px;
+  --tooltip-white-space-hidden: nowrap;
+  --tooltip-white-space-shown: normal;
+  --tooltip-z-index: 100;
+  width: max-content;
+}
+
+.library-icon {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--spacing-8);
+  min-width: var(--spacing-7);
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-default);
+  font-size: var(--font-size-body2);
+}
+
+.scroll-container {
+  height: 100%;
+  overflow: auto;
+  margin: 0 auto;
+  width: 100%;
+}
+.scrollable {
+  margin: 0 auto;
+  height: 100%;
+}

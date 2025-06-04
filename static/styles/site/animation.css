@@ -1,0 +1,14 @@
+:root {
+  --in-to-out-easing: ease in;
+  --out-to-in-easing: ease out;
+
+  --small-animation-timing: 150ms;
+  --medium-animation-timing: 250ms;
+  --large-animation-timing: 400ms;
+
+  --animation-easing: ease-in-out;
+
+  --small-animation: var(--small-animation-timing) var(--animation-easing);
+  --medium-animation: var(--medium-animation-timing) var(--animation-easing);
+  --large-animation: var(--large-animation-timing) var(--animation-easing);
+}
